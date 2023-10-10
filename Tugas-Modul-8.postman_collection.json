@@ -1,42 +1,104 @@
 {
 	"info": {
-		"_postman_id": "efc73a12-36c6-4c9f-93ac-9bc4d30c43ba",
-		"name": "Tugas-Modul-8",
+		"_postman_id": "3746abe7-c19d-4084-b016-714ccb062736",
+		"name": "Modul 8",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "29431769"
+		"_exporter_id": "29384494"
 	},
 	"item": [
 		{
 			"name": "Register",
 			"request": {
-				"method": "GET",
-				"header": []
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"fullName\": \"Bayu Setiawan\",\r\n  \"email\": \"bayu@skyshi.com\",\r\n  \"password\": \"Passw0rd!\",\r\n  \"bio\": \"Backend Developer @SkyshiDigitalIndonesia\",\r\n  \"dob\": \"1997-06-30\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:1945/auth/register",
+					"host": [
+						"localhost"
+					], 
+					"port": "1945",
+					"path": [
+						"auth",
+						"register"
+					]
+				}
 			},
 			"response": []
 		},
 		{
 			"name": "Login",
 			"request": {
-				"method": "GET",
-				"header": []
-			},
-			"response": []
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"bayu@skyshi.com\",\r\n    \"password\": \"Passw0rd!\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:1945/auth/login",
+					"host": [
+						"localhost"
+					],
+				
+				"port": "1945",
+				"path": [
+					"auth",
+					"login"
+				]
+			}
 		},
-		{
-			"name": "Get Users",
-			"request": {
-				"method": "GET",
-				"header": []
-			},
-			"response": []
+		"response": []
+	},
+	{
+		"name": "Data User",
+		"request": {
+			"method": "GET",
+			"header": [],
+			"url": {
+				"raw": "localhost:1945/users",
+				"host": [
+					"localhost"
+				],
+				"port": "1945",
+				"path": [
+					"users"
+				]
+			}
 		},
-		{
-			"name": "User Id",
-			"request": {
-				"method": "GET",
-				"header": []
-			},
-			"response": []
-		}
-	]
+		"response": []
+	},
+	{
+		"name": "Data User by ID",
+		"request": {
+			"method": "GET",
+			"header": [],
+			"url": {
+				"raw": "localhost:1945/users/1",
+				"host": [
+					"localhost"
+				],
+				"port": "1945",
+				"path": [
+					"users",
+					"1"
+				]
+			}
+		},
+		"response": []
+	}
+]
 }
